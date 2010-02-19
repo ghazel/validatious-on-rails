@@ -27,6 +27,7 @@ begin
       Dir.glob(File.join('{generators,lib,test,rails}', '**', '*').to_s).reject { |v| v =~ /\.log/i }
     gemspec.executables = %w()
     gemspec.extra_rdoc_files = SUPPORT_FILES
+    gemspec.add_dependency('validation_reflection', '>= 0.3.5')
   end
 rescue LoadError
   puts "Jeweler, or one of its dependencies, is not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
